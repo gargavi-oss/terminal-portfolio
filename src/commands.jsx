@@ -10,9 +10,6 @@ import {
 import { THEMES } from './data/themes.js'
 import { NAME_ART, NAME_ART_MOBILE, AVATAR_ART } from './data/ascii.js'
 
-/* ===========================================================================
-   Command metadata — drives `help`, autocomplete, and validation.
-=========================================================================== */
 export const COMMAND_LIST = [
   { cmd: 'about', desc: 'about Avi garg' },
   { cmd: 'clear', desc: 'clear the terminal' },
@@ -36,9 +33,6 @@ export const COMMAND_NAMES = COMMAND_LIST.map((c) => c.cmd)
 const SPECIAL_CMDS = ['projects', 'socials', 'themes', 'echo']
 const PAD = Math.max(...COMMAND_NAMES.map((c) => c.length)) + 2
 
-/* ===========================================================================
-   Presentational helpers
-=========================================================================== */
 const Line = ({ children, className = '' }) => (
   <div className={`leading-relaxed whitespace-pre-wrap break-words ${className}`}>
     {children}
@@ -75,12 +69,10 @@ const Usage = ({ cmd, marginY = false }) => {
 const isArgInvalid = (args, action, options) =>
   args[0] !== action || !options.includes(args[1]) || args.length > 2
 
-/* ===========================================================================
-   WELCOME / banner
-=========================================================================== */
+
 export function Welcome() {
   return (
-    <div className="my-2 flex flex-wrap-reverse items-center gap-x-4">
+    <div className="  items-center gap-x-4">
       <div className="min-w-[260px]">
         <pre className="hidden text-primary sm:block">{NAME_ART}</pre>
         <pre className="block text-center text-primary sm:hidden">
@@ -108,9 +100,6 @@ export function Welcome() {
   )
 }
 
-/* ===========================================================================
-   Individual command outputs
-=========================================================================== */
 const Help = () => (
   <div className='font-bold text-50'>
     {COMMAND_LIST.map(({ cmd, desc }) => (
@@ -253,17 +242,13 @@ const History = ({ history }) => (
 const Whoami = ()=>{
   return (
     <div className="my-2 flex flex-wrap-reverse items-center gap-x-8">
-      Visitor
+      visitor
    
   </div>
   )
 }
 
-/* ===========================================================================
-   Dispatcher
-=========================================================================== */
 export function renderCommand(cmd, args, ctx) {
-  // commands that don't take arguments → show "Usage: <cmd>" if given any
   if (!SPECIAL_CMDS.includes(cmd) && args.length > 0) {
     return <Line className="text-t300">Usage: {cmd}</Line>
   }

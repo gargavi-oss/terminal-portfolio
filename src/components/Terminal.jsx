@@ -164,7 +164,7 @@ export default function Terminal({ setTheme }) {
   const chronological = ordered.map((h) => h.raw)
 
   return (
-    <div className="flex h-dvh flex-col overflow-y-visible px-4 pt-4 pb-3 text-[0.92rem] sm:px-6 sm:text-base">
+    <div className="flex  flex-col overflow-y-visible px-4 pt-4 pb-3 text-[0.92rem] sm:px-6 sm:text-base">
 
       <div className=" overflow-y-auto">
         {ordered.map(({ id, raw }) => {
