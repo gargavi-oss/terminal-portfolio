@@ -14,8 +14,7 @@ import { NAME_ART, NAME_ART_MOBILE, AVATAR_ART } from './data/ascii.js'
    Command metadata — drives `help`, autocomplete, and validation.
 =========================================================================== */
 export const COMMAND_LIST = [
-  { cmd: 'about', desc: 'who I am' },
-  { cmd: 'achievements', desc: 'highlights & recognition' },
+  { cmd: 'about', desc: 'about Avi garg' },
   { cmd: 'clear', desc: 'clear the terminal' },
   { cmd: 'echo', desc: 'print out anything' },
   { cmd: 'education', desc: 'my education background' },
@@ -63,10 +62,10 @@ const Usage = ({ cmd, marginY = false }) => {
   const a = map[cmd]
   return (
     <div className={marginY ? 'my-2' : ''}>
-      <Line className="text-t300">
+      <Line className="text-t200">
         Usage: {cmd} {a.action} &lt;{a.placeholder}&gt;
       </Line>
-      <Line className="text-t300">
+      <Line className="text-t200">
         eg: {cmd} {a.action} {a.eg}
       </Line>
     </div>
@@ -92,16 +91,13 @@ export function Welcome() {
         </Line>
         <Line className="text-t200 font-bold">----</Line>
         <Line>
-          <span className="text-t200">{profile.tagline}</span>
-        </Line>
-        <Line className="text-t300">----</Line>
-        <Line>
-          <span className="text-t200">Source: </span>
-          <Ext href="https://github.com/gargavi-oss">
+          <span className="text-t200 font-bold">The project source code can be found in this project's <Ext href="https://github.com/gargavi-oss">
             Github Repo
-          </Ext>
+          </Ext> .</span>
         </Line>
-        <Line>
+        <Line className="text-t200 font-bold">----</Line>
+    
+        <Line className='font-bold'>
           <span className="text-t200">For a list of available commands, type </span>
           <span className="text-primary">`help`</span>
           <span className="text-t200">.</span>
@@ -116,19 +112,19 @@ export function Welcome() {
    Individual command outputs
 =========================================================================== */
 const Help = () => (
-  <Block>
+  <div className='font-bold text-50'>
     {COMMAND_LIST.map(({ cmd, desc }) => (
       <Line key={cmd}>
         <span className="text-primary">{cmd}</span>
         <span className="text-t300">{' '.repeat(PAD - cmd.length)}- {desc}</span>
       </Line>
     ))}
-    <div className="mt-3 space-y-0.5 text-t300">
+    <div className="mt-2 text-sm font-bold  text-t200">
       <Line>Tab or Ctrl + i&nbsp; =&gt; autocompletes the command</Line>
       <Line>Up / Down Arrow&nbsp; =&gt; go through previous commands</Line>
       <Line>Ctrl + l&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&gt; clear the terminal</Line>
     </div>
-  </Block>
+    </div>
 )
 
 const About = () => (
@@ -175,17 +171,6 @@ const Skills = () => (
   </Block>
 )
 
-const Achievements = () => (
-  <Block>
-    <Line className="text-t200">Some things I'm proud of:</Line>
-    {achievements.map(({ title, desc }) => (
-      <div key={title} className="mt-2">
-        <Line className="text-primary">★ {title}</Line>
-        <Line className="text-t300">{desc}</Line>
-      </div>
-    ))}
-  </Block>
-)
 
 const Projects = ({ args }) => {
   if (args.length > 0) {
@@ -268,18 +253,7 @@ const History = ({ history }) => (
 const Whoami = ()=>{
   return (
     <div className="my-2 flex flex-wrap-reverse items-center gap-x-8">
-    <div className="min-w-[260px] flex-1 space-y-1">
-      <Line className="text-t200">
-        {profile.name} — {profile.role}
-      </Line>
-      
-      <Line>
-        <span className="text-t200">{profile.tagline}</span>
-      </Line>
-      <Line>
-        <span className="text-t200">More focused on Backend Development</span>
-      </Line>
-    </div>
+      Visitor
    
   </div>
   )
@@ -297,8 +271,6 @@ export function renderCommand(cmd, args, ctx) {
   switch (cmd) {
     case 'about':
       return <About />
-    case 'achievements':
-      return <Achievements />
     case 'echo':
       return <Echo args={args} />
     case 'education':
@@ -314,7 +286,7 @@ export function renderCommand(cmd, args, ctx) {
     case 'projects':
       return <Projects args={args} />
     case 'pwd':
-      return <Line className="text-t100">/home/avi-garg</Line>
+      return <Line className="text-t100">/home/garg-avi</Line>
     case 'resume':
       return (
         <Line>

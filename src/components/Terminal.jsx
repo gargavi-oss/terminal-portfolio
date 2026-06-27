@@ -6,9 +6,6 @@ import { profile, projects, socials } from '../data/resume.js'
 
 let _id = 1
 
-/* Tab-completion for sub-commands (themes/projects/socials), ported from the
-   reference. Returns { value } to set input, { hints } to list, { extra } to
-   merge into command matches, or null to fall back to command-name matching. */
 function argComplete(input) {
   const tokens = input.split(' ')
   if (input === 'themes ') return { value: 'themes set' }
@@ -35,7 +32,6 @@ function argComplete(input) {
 
 export default function Terminal({ setTheme }) {
   const [inputVal, setInputVal] = useState('')
-  // stored newest-first; rendered oldest-first so the welcome banner is on top.
   const [history, setHistory] = useState([{ id: 0, raw: 'welcome' }])
   const [pointer, setPointer] = useState(-1)
   const [hints, setHints] = useState([])
@@ -43,7 +39,6 @@ export default function Terminal({ setTheme }) {
   const inputRef = useRef(null)
   const endRef = useRef(null)
 
-  /* Focus input whenever the page is clicked (unless selecting text). */
   const focusInput = useCallback(() => {
     const sel = window.getSelection()
     if (sel && sel.toString().length > 0) return
@@ -55,7 +50,6 @@ export default function Terminal({ setTheme }) {
     return () => document.removeEventListener('click', focusInput)
   }, [focusInput])
 
-  /* Auto-scroll to the latest output + keep caret active. */
   useEffect(() => {
     endRef.current?.scrollIntoView({
       behavior: "instant",
@@ -165,13 +159,13 @@ export default function Terminal({ setTheme }) {
     }
   }
 
-  // oldest-first for natural top-to-bottom reading
+
   const ordered = [...history].reverse()
   const chronological = ordered.map((h) => h.raw)
 
   return (
     <div className="flex h-dvh flex-col overflow-y-visible px-4 pt-4 pb-3 text-[0.92rem] sm:px-6 sm:text-base">
-      {/* History */}
+
       <div className=" overflow-y-auto">
         {ordered.map(({ id, raw }) => {
           const trimmed = raw.trim()
@@ -204,7 +198,6 @@ export default function Terminal({ setTheme }) {
         <div ref={endRef} />
       </div>
   
-      {/* Autocomplete */}
       {hints.length > 1 && (
         <div className=" py-2 text-primary">
           <div className="flex flex-wrap gap-x-4 gap-y-1">
@@ -215,10 +208,9 @@ export default function Terminal({ setTheme }) {
         </div>
       )}
   
-      {/* Prompt */}
       <form
         onSubmit={handleSubmit}
-        className="flex items-center gap-2  pt-2"
+        className="flex items-center  pt-2"
       >
         <Prompt />
   

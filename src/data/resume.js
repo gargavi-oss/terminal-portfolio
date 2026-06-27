@@ -27,7 +27,7 @@ export const about = {
 export const education = [
   {
     title: 'B.E. in Electronics & Communication Engineering',
-    desc: 'Thapar Institute of Engineering & Technology | CGPA 8.53 | 2024 ~ 2028',
+    desc: 'Thapar Institute of Engineering & Technology | CGPA 8.8 | 2024 ~ 2028',
   },
   {
     title: 'Relevant Coursework',
@@ -41,19 +41,25 @@ export const projects = [
     id: 1,
     title: 'Delivery Failure Predictor',
     desc: 'AI system (XGBoost, 96.18% acc) that flags orders at risk of failed delivery. React + Express + ML, 61-feature pipeline.',
-    url: 'https://github.com/gargavi-oss',
+    url: 'https://github.com/gargavi-oss/DeliveryFailurePredictor',
   },
   {
     id: 2,
-    title: 'Prodivity Technologies',
-    desc: 'Full-stack freelance agency platform (React, Node, Express, MongoDB) with a secure admin dashboard for content management.',
-    url: 'https://github.com/gargavi-oss',
+    title : 'Bank Backend Management System',
+    desc: 'A secure banking backend built with Node.js, Express.js, and MongoDB that supports user authentication, account management, balance tracking, and fund transfers with idempotency protection.',
+    url: ' https://github.com/gargavi-oss/backendBankingSystem'
   },
   {
     id: 3,
+    title: 'Prodivity Technologies',
+    desc: 'Full-stack freelance agency platform (React, Node, Express, MongoDB) with a secure admin dashboard for content management.',
+    url: 'https://github.com/gargavi-oss/ProdivityTechnologies',
+  },
+  {
+    id: 4,
     title: 'Malaria Detection System',
     desc: 'Deep-learning diagnostic (ResNet18 + FastAPI + React) classifying blood-smear images as Parasitized or Uninfected.',
-    url: 'https://github.com/gargavi-oss',
+    url: 'https://github.com/gargavi-oss/malaria_project',
   },
 ]
 
