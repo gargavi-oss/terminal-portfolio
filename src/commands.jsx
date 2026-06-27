@@ -83,7 +83,7 @@ export function Welcome() {
         </Line>
         <Line className="text-t200 font-bold">----</Line>
         <Line>
-          <span className="text-t200 font-bold">The project source code can be found in this project's <Ext href="https://github.com/gargavi-oss">
+          <span className="text-t200 font-bold">The project source code can be found in this project's <Ext href="https://github.com/gargavi-oss/terminal-portfolio">
             Github Repo
           </Ext> .</span>
         </Line>
