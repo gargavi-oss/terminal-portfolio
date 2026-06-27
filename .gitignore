@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.env
+.env.*
+.vite
+
+# project-specific
+.agents
+.claude
+avi_s_resume-9.pdf
+skills-lock.json

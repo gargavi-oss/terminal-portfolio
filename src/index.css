@@ -1,0 +1,169 @@
+@import 'tailwindcss';
+
+/* ===========================================================================
+   THEMES — color values switch via [data-theme="..."] on <html>.
+   Ported from satnaing/terminal-portfolio (dark, light, blue-matrix,
+   espresso, green-goblin, ubuntu).
+   --c-* = raw theme values · @theme maps semantic --color-* to them.
+=========================================================================== */
+:root,
+[data-theme='dark'] {
+  --c-body: #1d2a35;
+  --c-scroll: #19252e;
+  --c-scroll-hover: #162028;
+  --c-primary: #05ce91;
+  --c-secondary: #ff9d00;
+  --c-100: #cbd5e1;
+  --c-200: #b2bdcc;
+  --c-300: #64748b;
+}
+[data-theme='light'] {
+  --c-body: #eff3f3;
+  --c-scroll: #c1c1c1;
+  --c-scroll-hover: #aaaaaa;
+  --c-primary: #027474;
+  --c-secondary: #ff9d00;
+  --c-100: #334155;
+  --c-200: #475569;
+  --c-300: #64748b;
+}
+[data-theme='blue-matrix'] {
+  --c-body: #101116;
+  --c-scroll: #424242;
+  --c-scroll-hover: #616161;
+  --c-primary: #00ff9c;
+  --c-secondary: #60fdff;
+  --c-100: #ffffff;
+  --c-200: #c7c7c7;
+  --c-300: #76ff9f;
+}
+[data-theme='espresso'] {
+  --c-body: #323232;
+  --c-scroll: #5b5b5b;
+  --c-scroll-hover: #393939;
+  --c-primary: #e1e48b;
+  --c-secondary: #a5c260;
+  --c-100: #f7f7f7;
+  --c-200: #eeeeee;
+  --c-300: #5b5b5b;
+}
+[data-theme='green-goblin'] {
+  --c-body: #000000;
+  --c-scroll: #2e2e2e;
+  --c-scroll-hover: #414141;
+  --c-primary: #e5e500;
+  --c-secondary: #04a500;
+  --c-100: #01ff00;
+  --c-200: #04a5b2;
+  --c-300: #e50101;
+}
+[data-theme='ubuntu'] {
+  --c-body: #2d0922;
+  --c-scroll: #f47845;
+  --c-scroll-hover: #e65f31;
+  --c-primary: #80d932;
+  --c-secondary: #80d932;
+  --c-100: #ffffff;
+  --c-200: #e1e9cc;
+  --c-300: #cdcdcd;
+}
+
+@theme {
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+
+  --color-body: var(--c-body);
+  --color-primary: var(--c-primary);
+  --color-secondary: var(--c-secondary);
+  --color-t100: var(--c-100);
+  --color-t200: var(--c-200);
+  --color-t300: var(--c-300);
+}
+
+/* ===========================================================================
+   BASE
+=========================================================================== */
+html {
+  background-color: var(--c-body);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  background-color: var(--c-body);
+  color: var(--c-100);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background: var(--c-primary);
+  color: var(--c-body);
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: var(--c-body);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-scroll);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-scroll-hover);
+}
+
+/* ===== Input ===== */
+input[type='text'] {
+  background-color: transparent;
+  color: var(--c-100);
+  caret-color: var(--c-primary);
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+input[type='text']:focus-visible {
+  outline: none;
+}
+
+/* ===== Links inside terminal output ===== */
+.term-link {
+  color: var(--c-secondary);
+  text-decoration: none;
+  line-height: 1.5rem;
+  white-space: nowrap;
+  border-bottom: 2px dashed var(--c-secondary);
+  cursor: pointer;
+}
+.term-link:hover {
+  border-bottom-style: solid;
+}
+.term-link:focus-visible {
+  outline: 2px solid var(--c-secondary);
+  outline-offset: 2px;
+}
+
+/* subtle entrance for new output lines */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fadeUp 0.16s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    animation: none;
+  }
+  body {
+    transition: none;
+  }
+}
