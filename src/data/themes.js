@@ -1,10 +1,16 @@
 export const THEMES = [
-  'dark',
-  'light',
-  'blue-matrix',
-  'espresso',
-  'green-goblin',
-  'ubuntu',
+  "espresso",
+  "ubuntu",
+  "cyberpunk",
+  "dracula",
+  "nord",
+  "solarized-dark",
+  "tokyo-night",
+  "hacker",
+  "oceanic",
+  "crimson",
+  "midnight",
+  "amber",
 ]
 
-export const DEFAULT_THEME = 'dark'
+export const DEFAULT_THEME = 'cyberpunk'

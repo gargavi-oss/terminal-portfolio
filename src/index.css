@@ -1,72 +1,148 @@
 @import 'tailwindcss';
 
-/* ===========================================================================
-   THEMES — color values switch via [data-theme="..."] on <html>.
-   Ported from satnaing/terminal-portfolio (dark, light, blue-matrix,
-   espresso, green-goblin, ubuntu).
-   --c-* = raw theme values · @theme maps semantic --color-* to them.
-=========================================================================== */
 :root,
-[data-theme='dark'] {
-  --c-body: #1d2a35;
-  --c-scroll: #19252e;
-  --c-scroll-hover: #162028;
-  --c-primary: #05ce91;
-  --c-secondary: #ff9d00;
-  --c-100: #cbd5e1;
-  --c-200: #b2bdcc;
-  --c-300: #64748b;
-}
-[data-theme='light'] {
-  --c-body: #eff3f3;
-  --c-scroll: #c1c1c1;
-  --c-scroll-hover: #aaaaaa;
-  --c-primary: #027474;
-  --c-secondary: #ff9d00;
-  --c-100: #334155;
-  --c-200: #475569;
-  --c-300: #64748b;
-}
-[data-theme='blue-matrix'] {
-  --c-body: #101116;
-  --c-scroll: #424242;
-  --c-scroll-hover: #616161;
-  --c-primary: #00ff9c;
-  --c-secondary: #60fdff;
+
+[data-theme='cyberpunk'] {
+  --c-body: #0a0a12;
+  --c-scroll: #2d0f3f;
+  --c-scroll-hover: #45175f;
+  --c-primary: #ff2ea6;
+  --c-secondary: #00f7ff;
   --c-100: #ffffff;
-  --c-200: #c7c7c7;
-  --c-300: #76ff9f;
+  --c-200: #cfcfcf;
+  --c-300: #7f7f7f;
 }
-[data-theme='espresso'] {
-  --c-body: #323232;
-  --c-scroll: #5b5b5b;
-  --c-scroll-hover: #393939;
-  --c-primary: #e1e48b;
-  --c-secondary: #a5c260;
-  --c-100: #f7f7f7;
-  --c-200: #eeeeee;
-  --c-300: #5b5b5b;
+
+/* ===========================
+   Dracula
+=========================== */
+
+[data-theme='espresso'] { --c-body: #323232; --c-scroll: #5b5b5b; --c-scroll-hover: #393939; --c-primary: #e1e48b; --c-secondary: #a5c260; --c-100: #f7f7f7; --c-200: #eeeeee; --c-300: #5b5b5b; }
+
+[data-theme='dracula'] {
+  --c-body: #282a36;
+  --c-scroll: #44475a;
+  --c-scroll-hover: #5c637a;
+  --c-primary: #50fa7b;
+  --c-secondary: #ff79c6;
+  --c-100: #f8f8f2;
+  --c-200: #d6d6d6;
+  --c-300: #8b8b8b;
 }
-[data-theme='green-goblin'] {
-  --c-body: #000000;
-  --c-scroll: #2e2e2e;
-  --c-scroll-hover: #414141;
-  --c-primary: #e5e500;
-  --c-secondary: #04a500;
-  --c-100: #01ff00;
-  --c-200: #04a5b2;
-  --c-300: #e50101;
+
+/* ===========================
+   Nord
+=========================== */
+[data-theme='nord'] {
+  --c-body: #2e3440;
+  --c-scroll: #3b4252;
+  --c-scroll-hover: #434c5e;
+  --c-primary: #88c0d0;
+  --c-secondary: #81a1c1;
+  --c-100: #eceff4;
+  --c-200: #d8dee9;
+  --c-300: #a3b1c6;
 }
-[data-theme='ubuntu'] {
-  --c-body: #2d0922;
-  --c-scroll: #f47845;
-  --c-scroll-hover: #e65f31;
-  --c-primary: #80d932;
-  --c-secondary: #80d932;
-  --c-100: #ffffff;
-  --c-200: #e1e9cc;
-  --c-300: #cdcdcd;
+
+/* ===========================
+   Solarized Dark
+=========================== */
+[data-theme='solarized-dark'] {
+  --c-body: #002b36;
+  --c-scroll: #073642;
+  --c-scroll-hover: #0b4b5a;
+  --c-primary: #2aa198;
+  --c-secondary: #b58900;
+  --c-100: #fdf6e3;
+  --c-200: #93a1a1;
+  --c-300: #657b83;
 }
+
+/* ===========================
+   Tokyo Night
+=========================== */
+[data-theme='tokyo-night'] {
+  --c-body: #1a1b26;
+  --c-scroll: #2a2d3e;
+  --c-scroll-hover: #373b53;
+  --c-primary: #7aa2f7;
+  --c-secondary: #bb9af7;
+  --c-100: #c0caf5;
+  --c-200: #9aa5ce;
+  --c-300: #565f89;
+}
+
+/* ===========================
+   Hacker Green
+=========================== */
+[data-theme='hacker'] {
+  --c-body: #050505;
+  --c-scroll: #1a1a1a;
+  --c-scroll-hover: #303030;
+  --c-primary: #00ff41;
+  --c-secondary: #7fff00;
+  --c-100: #d8ffd8;
+  --c-200: #8cff8c;
+  --c-300: #3b7f3b;
+}
+
+/* ===========================
+   Oceanic
+=========================== */
+[data-theme='oceanic'] {
+  --c-body: #0b1727;
+  --c-scroll: #14243a;
+  --c-scroll-hover: #1f3552;
+  --c-primary: #4fc3f7;
+  --c-secondary: #00e5ff;
+  --c-100: #eef8ff;
+  --c-200: #b3d9ec;
+  --c-300: #6d9fb8;
+}
+
+/* ===========================
+   Crimson
+=========================== */
+[data-theme='crimson'] {
+  --c-body: #1a0d10;
+  --c-scroll: #33141a;
+  --c-scroll-hover: #4a1f28;
+  --c-primary: #ff4d6d;
+  --c-secondary: #ff9e64;
+  --c-100: #fff4f4;
+  --c-200: #e7bcbc;
+  --c-300: #a66d77;
+}
+
+/* ===========================
+   Midnight Purple
+=========================== */
+[data-theme='midnight'] {
+  --c-body: #12101d;
+  --c-scroll: #211d33;
+  --c-scroll-hover: #2d2744;
+  --c-primary: #9d7dff;
+  --c-secondary: #62d0ff;
+  --c-100: #f3f1ff;
+  --c-200: #cfc8f8;
+  --c-300: #8b82b9;
+}
+
+/* ===========================
+   Amber Terminal
+=========================== */
+[data-theme='amber'] {
+  --c-body: #1b1405;
+  --c-scroll: #33260d;
+  --c-scroll-hover: #4a3812;
+  --c-primary: #ffbf00;
+  --c-secondary: #ffd54f;
+  --c-100: #fff8e1;
+  --c-200: #ffe082;
+  --c-300: #b8860b;
+}
+
+[data-theme='ubuntu'] { --c-body: #2d0922; --c-scroll: #f47845; --c-scroll-hover: #e65f31; --c-primary: #80d932; --c-secondary: #80d932; --c-100: #ffffff; --c-200: #e1e9cc; --c-300: #cdcdcd; }
 
 @theme {
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
@@ -79,9 +155,7 @@
   --color-t300: var(--c-300);
 }
 
-/* ===========================================================================
-   BASE
-=========================================================================== */
+
 html {
   background-color: var(--c-body);
 }
