@@ -1,0 +1,112 @@
+{
+    "profile": {
+      "name": "Avi Garg",
+      "role": "Backend & Full-Stack Developer",
+      "host": "terminal.gargavi-oss.space",
+      "tagline": "B.E. Electronics & Communication @ Thapar Institute. I build scalable backend systems, full-stack web applications, and AI-powered solutions.",
+      "location": "Patiala, Punjab, India",
+      "email": "avigarg258@gmail.com",
+      "phone": "+91 7404648978",
+      "portfolio": "https://terminal.gargavi-oss.space"
+    },
+    "about": {
+      "intro": "Avi Garg",
+      "role": "A Backend & Full-Stack Developer",
+      "location": "Patiala, India",
+      "lines": [
+        "I am an undergraduate engineer passionate about backend engineering, scalable APIs, and cloud-native applications.",
+        "I enjoy building secure systems, full-stack web applications, and AI-powered software that solves real-world problems."
+      ]
+    },
+    "education": [
+      {
+        "title": "B.E. in Electronics & Communication Engineering",
+        "desc": "Thapar Institute of Engineering & Technology | CGPA 8.8 | Aug 2024 - May 2028"
+      },
+      {
+        "title": "Relevant Coursework",
+        "desc": "DBMS · Data Structures & Algorithms · Design & Analysis of Algorithms · Operating Systems · OOP"
+      }
+    ],
+    "projects": [
+      {
+        "id": 1,
+        "title": "Banking Transaction Backend API",
+        "desc": "Secure banking backend built with Node.js, Express.js, MongoDB, JWT Authentication, Docker, and REST APIs featuring multi-account management, idempotent fund transfers, and deployed on AWS EC2 & Render.",
+        "url": "https://github.com/gargavi-oss/backendBankingSystem"
+      },
+      {
+        "id": 2,
+        "title": "AI-Powered Delivery Failure Prediction System",
+        "desc": "Machine learning system using XGBoost (96.18% validation accuracy) with a 61-feature pipeline and React + FastAPI dashboard for real-time delivery risk prediction.",
+        "url": "https://github.com/gargavi-oss/DeliveryFailurePredictor"
+      },
+      {
+        "id": 3,
+        "title": "Prodivity Technologies",
+        "desc": "Full-stack MERN platform for a freelance agency with secure admin dashboard, REST APIs, MongoDB, authentication, and dynamic content management.",
+        "url": "https://github.com/gargavi-oss/ProdivityTechnologies"
+      },
+      {
+        "id": 4,
+        "title": "Deep Learning Malaria Detection System",
+        "desc": "ResNet-18 based deep learning application with FastAPI backend and React frontend for malaria diagnosis using microscopic blood smear images.",
+        "url": "https://github.com/gargavi-oss/malaria_project"
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Open Source & Version Control",
+        "desc": "Built and maintained multiple production-ready full-stack and backend projects using Git, GitHub, Docker, AWS EC2, Render, and modern development workflows."
+      }
+    ],
+    "skills": [
+      {
+        "group": "Languages",
+        "items": "C++, JavaScript, TypeScript, Python, SQL"
+      },
+      {
+        "group": "Frameworks & Libraries",
+        "items": "Node.js, Express.js, React.js, FastAPI, Tailwind CSS, Streamlit"
+      },
+      {
+        "group": "Databases",
+        "items": "MongoDB, MySQL, PostgreSQL"
+      },
+      {
+        "group": "Developer Tools",
+        "items": "Git, GitHub, Docker, Docker Compose, Postman"
+      },
+      {
+        "group": "Cloud & Deployment",
+        "items": "AWS EC2, AWS Amplify, Render, Vercel"
+      },
+      {
+        "group": "Core Concepts",
+        "items": "REST APIs, JWT Authentication, DBMS, OOP, DSA, System Design, Distributed Systems"
+      }
+    ],
+    "socials": [
+      {
+        "id": 1,
+        "title": "GitHub",
+        "url": "https://github.com/gargavi-oss"
+      },
+      {
+        "id": 2,
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/avi-garg-401884321/"
+      },
+      {
+        "id": 3,
+        "title": "Portfolio",
+        "url": "https://terminal.gargavi-oss.space"
+      },
+      {
+        "id": 4,
+        "title": "Email",
+        "url": "mailto:avigarg258@gmail.com"
+      }
+    ]                
+
+}
