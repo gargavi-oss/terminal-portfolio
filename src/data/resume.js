@@ -1,4 +1,4 @@
-import resumeJson from "../data/resume.json"
+import resumeJson from "../data/data.json"
   
 export const profile = resumeJson.profile;
 export const about = resumeJson.about
