@@ -13,4 +13,4 @@ export const THEMES = [
   "amber",
 ]
 
-export const DEFAULT_THEME = 'cyberpunk'
+export const DEFAULT_THEME = 'tokyo-night'
